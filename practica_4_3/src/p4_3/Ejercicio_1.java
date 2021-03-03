@@ -1,5 +1,4 @@
 package p4_3;
-import java.util.Iterator;
 
 /**
  * Hacer un programa Java, que:
@@ -25,14 +24,21 @@ public class Ejercicio_1 {
 		int[][] tabla=new int[10][10];
 		
 		for (int x = 0; x < tabla.length; x++) {
-			for (int y = 0; y < tabla[x].length; y++) {
-				if (tabla[x]%2==0) {
-					tabla[x]=1;
+			for (int y = 0; y < tabla[0].length; y++) {
+				if (x%2==0) {
+					tabla[x][y]=1;
 				} else {
-					tabla[x]=0;
-					System.out.println("esto es una prueba");
+					tabla[x][y]=0;
 				}
 			}
+		}
+		
+		for (int x = 0; x < tabla.length; x++) {
+			for (int y = 0; y < tabla[0].length; y++) {
+				System.out.print(tabla[x][y]+"  ");
+				
+			}
+			System.out.print("\n");
 		}
 		
 	}
