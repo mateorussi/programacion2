@@ -30,6 +30,7 @@ public class Ejercicio_1 {
 					tabla[x]=1;
 				} else {
 					tabla[x]=0;
+					System.out.println("esto es una prueba");
 				}
 			}
 		}
