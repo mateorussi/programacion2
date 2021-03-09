@@ -4,7 +4,6 @@ package p4_3;
  * unidimensional o vector cuyo primer elemento contenga la suma de los elementos de
  * la primera fila del array bidimensional, el segundo la suma de los elementos de la
  * segunda fila del array bidimensional, y asi sucesivamente.
-
  */
 
 /**
@@ -20,15 +19,16 @@ public class Ejercicio_8 {
 		// TODO Auto-generated method stub
 
 		int[][] matriz=new int[10][15];
-		int[] vector=new int[10];
+		int[] vectorSuma=new int[10];
 		
-		System.out.println("Array bidimensional\n");
 		for (int x = 0; x < matriz.length; x++) {
 			for (int y = 0; y < matriz[x].length; y++) {
 				matriz[x][y]=(int) (Math.random()*9);
 			}
 		}
 		
+		//Visualizar array
+		System.out.println("Array bidimensional\n");
 		for (int x = 0; x < matriz.length; x++) {
 			for (int y = 0; y < matriz[x].length; y++) {
 				System.out.print(matriz[x][y]+"   ");
@@ -36,21 +36,17 @@ public class Ejercicio_8 {
 			System.out.println("\n");
 		}
 		
-		System.out.println("\nVector suma\n");
+		//Vector suma de filas
 		
-		//Vector de sumas de filas
-		
-		
-		for (int i = 0; i < vector.length; i++) {
-			for (int x = 0; x < matriz.length; x++) {
-				for (int y = 0; y < matriz[x].length; y++) {
-					vector[i] += matriz[0][y];
-				}
+		for (int x = 0; x < matriz.length; x++) {
+			for (int y = 0; y < matriz[x].length; y++) {
+				vectorSuma[y] += matriz[y][x];
 			}
 		}
 		
-		for (int i = 0; i < vector.length; i++) {
-			System.out.print(vector[i]+"   ");
+		System.out.println("\nVector suma\n");
+		for (int i = 0; i < vectorSuma.length; i++) {
+			System.out.print("\t"+vectorSuma[i]);
 		}
 	
 	}

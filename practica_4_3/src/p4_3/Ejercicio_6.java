@@ -21,16 +21,10 @@ public class Ejercicio_6 {
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
 
-		Scanner sc=new Scanner(System.in);
-		String notasA[][]=new String[4][16];
+		int notas[][]=new int[3][15];
 		
-		int[][] notasA;
+		float mediaN, mediaA;
 		
-		
-		
-		for (int x = 0; x < notasA.length; x++) {
-			notasA[x]= {"Matematicas","Física","Quimica"};
-		}
 		
 		
 	}

@@ -1,6 +1,6 @@
 package p4_3;
 
-import java.util.Scanner;
+import javax.swing.JOptionPane;
 
 /**
  * Diseñar programa Java, que:
@@ -23,47 +23,42 @@ public class Ejercicio_5 {
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
 		
-		Scanner sc=new Scanner(System.in);
 		int matriz[][]=new int[5][5];
-		int nArray[][]=new int[6][6];
-		int total=0;
+		int sumaFila[]=new int[5];
+		int sumaColumna[]=new int[5];
 		
 		//cargar elementos
 		for (int x = 0; x < matriz.length; x++) {
 			for (int y = 0; y < matriz[x].length; y++) {
-				System.out.println("Ingrese valor de posicion x = "+x+" y= "+y);
-				matriz[x][y]=sc.nextInt();
+				matriz[x][y]= Integer.parseInt(JOptionPane.showInputDialog("ingrese valor de posicion x = "+x+" y = "+y));
 			}
 		}
 		
-		// Sumar filas
-		for (int i = 0; i < nArray.length - 1; i++) {
-		    int suma = 0;
-		    for (int j = 0; j < nArray[i].length - 1; j++) {
-		        suma += nArray[i][j];
+		// Sumar filas y Columnas
+		for (int x = 0; x < matriz.length; x++) {
+		 
+		    for (int y = 0; y < matriz[x].length; y++) {
+		        sumaFila[y] += matriz[y][x];
+		        sumaColumna[y] += matriz[x][y];
 		    }
-		    nArray[i][n[i].length] = suma; // Asignamos en la ultma posicion de j (columnas)
+		}
+		
+		for (int x = 0; x < sumaColumna.length; x++) {
+			System.out.println("");
+			for (int y = 0; y < sumaColumna.length; y++) {
+				System.out.print("\t"+matriz[x][y]);
+			}
+			
 		}
 
-		// Sumar columnas
-		for (int i = 0; i < nArray.length; i++) {
-		    int suma = 0;
-		    for (int j = 0; j < nArray[i].length - 1; j++) {
-		        suma += nArray[j][i]; // Invertimos las posiciones para poder sumar de forma horizontal
-		    }
-		    nArray[n.length][i] = suma;
+		// Mostramos la matriz suma
+		System.out.println("\n\nVector suma de Filas\n");
+		for (int i = 0; i < sumaFila.length; i++) {
+			System.out.print("\t"+sumaFila[i]);
 		}
-
-		// A la ultma posición se agrega el total
-		nArray[nArray.length - 1][nArray[0].length - 1] = total;
-
-		// Mostramos la matriz
-		for (int i = 0; i < nArray.length; i++) {
-		    for (int j = 0; j < nArray[i].length; j++) {
-		        System.out.print(nArray[i][j] + ", ");
-		        if (nArray.length == j)
-		            System.out.println("\n");
-		    }
+		System.out.println("\n\nVector suma de Columnas\n");
+		for (int i = 0; i < sumaColumna.length; i++) {
+			System.out.print("\t"+sumaColumna[i]);
 		}
 		
 	}
