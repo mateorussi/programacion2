@@ -36,14 +36,13 @@ public class Ejercicio_8 {
 			System.out.println("\n");
 		}
 		
-		//Vector suma de filas
-		
 		for (int x = 0; x < matriz.length; x++) {
 			for (int y = 0; y < matriz[x].length; y++) {
-				vectorSuma[y] += matriz[y][x];
+				vectorSuma[x] +=  matriz[x][y];
 			}
 		}
 		
+		//Visualizar Array
 		System.out.println("\nVector suma\n");
 		for (int i = 0; i < vectorSuma.length; i++) {
 			System.out.print("\t"+vectorSuma[i]);
