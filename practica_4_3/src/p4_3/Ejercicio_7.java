@@ -21,84 +21,56 @@ public class Ejercicio_7 {
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
 
-		int[][] clase1 = new int[3][30];
-		int[][] clase2 = new int[3][30];
-		int[][] clase3 = new int[3][30];
+		int[][] clase = new int[3][30];
 
 		// llenar valores
 
-		// Clase 1
-		for (int x = 0; x < clase1.length; x++) {
-			for (int y = 0; y < clase1[x].length; y++) {
-				clase1[x][y] = (int) (Math.random() * 10 + 1);
+		// Clase
+		for (int x = 0; x < clase.length; x++) {
+			for (int y = 0; y < clase[x].length; y++) {
+				clase[x][y] = (int) (Math.random() * 10 + 1);
 			}
 		}
 
-		// Clase 2
-		for (int x = 0; x < clase2.length; x++) {
-			for (int y = 0; y < clase2[x].length; y++) {
-				clase2[x][y] = (int) (Math.random() * 10 + 1);
-			}
-		}
-
-		// Clase 3
-		for (int x = 0; x < clase3.length; x++) {
-			for (int y = 0; y < clase3[x].length; y++) {
-				clase3[x][y] = (int) (Math.random() * 10 + 1);
-			}
-		}
-
-		// Visualizar array
+		// Visualizar array de la clase
 
 		System.out.println("Notas de la Clase 1\n");
-		// Clase 1
-		for (int x = 0; x < clase1.length; x++) {
-			for (int y = 0; y < clase1[x].length; y++) {
-				System.out.print(clase1[x][y] + "   ");
+
+		for (int x = 0; x < clase.length; x++) {
+			for (int y = 0; y < clase[x].length; y++) {
+				System.out.print(clase[x][y] + "   ");
 			}
 			System.out.println("\n");
 		}
-		System.out.println("\nNotas de la Clase 2\n");
-		// Clase 2
-		for (int x = 0; x < clase2.length; x++) {
-			for (int y = 0; y < clase2[x].length; y++) {
-				System.out.print(clase1[x][y] + "   ");
-			}
-			System.out.println("\n");
-		}
-		System.out.println("\nNotas de la clase 3\n");
-		// Clase 3
-		for (int x = 0; x < clase3.length; x++) {
-			for (int y = 0; y < clase3[x].length; y++) {
-				System.out.print(clase1[x][y] + "   ");
-			}
-			System.out.println("\n");
-		}
-		System.out.println("\n");
 
-		// Calculo
+		// Calculo notas minimas y maximas
 
-		int min = clase1[0][0];
-		int max = clase1[0][0];
-		
-		int nMaximas[] = new int[10];
-		int nMinimas[] = new int[10];
-		
-		for (int x = 0; x < clase1.length; x++) {
-			for (int y = 0; y < clase1.length; y++) {
+		int min = clase[0][0];
+		int max = clase[0][0];
 
-				if (clase1[x][y] < min) {
-					nMinimas[y] = clase1[x][y];
-					System.out.println("Nota minima: "+nMinimas[y]+" Alumno x = "+x+" y = "+y+" Clase 1");
+		for (int x = 0; x < clase.length; x++) {
+			for (int y = 0; y < clase[x].length; y++) {
+
+				if (clase[x][y] < min) {
+					min = clase[x][y];
 				}
-				if (clase1[x][y] > max) {
-					nMaximas[y] = clase1[x][y];
-					System.out.println("Nota maxima: "+nMinimas[y]+" Alumno x = "+x+" y = "+y+" Clase 1");
+				if (clase[x][y] > max) {
+					max = clase[x][y];
 				}
 			}
-
 		}
-
+	
+		//Visualizar notas minimas y maximas
+		for (int x = 0; x < clase.length; x++) {
+			for (int y = 0; y < clase[x].length; y++) {
+				if (min==clase[x][y]) {
+					System.out.println("Nota minima: " +clase[x][y]+ " alumno: "+ x +" y= "+ y +" clase: "+(x+1));
+				}
+				if (max==clase[x][y]) {
+					System.out.println("Nota maxima: " +clase[x][y]+ " alumno: x= "+ x +" y= "+ y +" clase: "+(x+1));
+				}
+			}
+		}
 	}
 
 }
