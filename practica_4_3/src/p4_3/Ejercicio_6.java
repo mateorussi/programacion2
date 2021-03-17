@@ -29,7 +29,7 @@ public class Ejercicio_6 {
 		System.out.println("Generacion de las notas");
 		
 		for (int x = 0; x < tablaNotas.length; x++) {
-			for (int y = 0; y < tablaNotas[0].length; y++) {
+			for (int y = 0; y < tablaNotas[x].length; y++) {
 				tablaNotas[x][y]=(int) (Math.random()*11);
 			}
 		}
