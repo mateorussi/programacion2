@@ -28,6 +28,10 @@ public class Ejercicio_6 {
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
 
+		Scvann
+		System.out.println("Ingrese m de piezas");
+		
+		int[][] inv = new int[m][n];
 	}
 
 }
