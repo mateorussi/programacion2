@@ -31,41 +31,45 @@ public class Rectangulo {
 	/**
 	 * @param args
 	 */
+	
 	private int base;
 	private int altura;
-	private char signo;
 	
-	
-	public Rectangulo(int b, int h) {
-		this.base = b;
-		this.altura = h;
-		this.signo = '\u00d7';
+	public Rectangulo(int base, int altura) {
+		this.base = base;
+		this.altura = altura;
 	}
 	
-	public void Pintar(boolean EstaPintado, char sgn){
-		if (sgn == '*') {
-			EstaPintado = true;
-		}
+	public char Pintar() {
+		char pintura = '*';
+		return pintura;
 	}
 	
-	public void PintarSigno() {
+	public char PintarSigno() {
+		char pintura = '*';
+		return pintura;
+	}
+	
+	public char Invertir(int base, int altura) {
+		
+		this.altura = base;
+		this.base = altura;
+		
+		char pintura = '*';
+		return pintura;
+	}
+	
+	public char CentrarHorizontal(int base, int altura) {
+		
+		int 
+		
+		char pintura = '*';
+		return pintura;
 		
 	}
 	
-	public void Invertir() {
-		
-	}
-	
-	public void CentrarHorizontal() {
-		
-	}
-	
-	public void CentrarPantalla() {
-		int inicio, a;
-		
-		inicio = (24 - altura)/2;
-		System.out.println("************************************************************");
-	}
 	
 	
+	
+
 }
