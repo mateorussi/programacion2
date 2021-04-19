@@ -38,4 +38,21 @@ package practica_7_3;
  */
 public class Fecha {
 
+	private int dia;
+	private int mes;
+	private int anyo;
+	
+	public Fecha(int dia, int mes, int anyo) {
+		this.dia = dia;
+		this.mes = mes;
+		this.anyo = anyo;
+	}
+	
+	/*
+	 * Metodos
+	 */
+	
+	public void bisiesto(int anyo) {
+		if (anyo % 4 && anyo )
+	}
 }
