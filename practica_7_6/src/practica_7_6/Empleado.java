@@ -36,4 +36,37 @@ package practica_7_6;
  */
 public class Empleado {
 
+	String nombre;
+	String departamento;
+	int edad;
+	double salario;
+	
+	//Constructor sin argumentos
+	public Empleado() {
+		
+	}
+	
+	//Constructor con todos los argumentos
+	public Empleado (String n, String d, int e, double s) {
+		this.nombre = n;
+		this.departamento = d;
+		this.edad = e;
+		this.salario = s;
+	}
+	
+	//Constructor con los argumentos nombre y departamento
+	
+	public Empleado (String n, String d) {
+		this.nombre = n;
+		this.departamento = d;
+	}
+
+	
+	@Override
+	
+	public String toString() {
+		return "Nombre: "+ nombre + ", departamento: "+ departamento + ", edad: " + ", salario: " + salario;
+	}
+	
+	
 }
